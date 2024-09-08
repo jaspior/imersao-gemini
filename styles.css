@@ -1,0 +1,251 @@
+
+
+/* Estilo geral */
+body {
+    font-family: 'Fox Cavalier', sans-serif;
+    background: radial-gradient(circle, #240046, #5a189a, #9d4edd, #f72585);
+    color: #00fffb;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+/* Estilo das imagens dos links */
+.imagem-cards {
+    display: block;
+    margin: 0 auto;
+
+}
+
+/* container do jogo */
+.pixi-container {
+    
+    position: relative;
+    width: 80%;
+    height: 300;
+}
+
+/* garante que a barra só apareça para a vertical */
+main{
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+header {
+
+    padding: 20px;
+  }
+  
+  /* Evite estilos que ocultem o elemento */
+  header {
+    display: block; /* Garante que o elemento seja exibido como um bloco */
+    visibility: visible; /* Garante que o elemento seja visível */
+  }
+
+
+/* barra lateral completa */
+.sidebar {
+    position: fixed;
+    background: linear-gradient(to bottom, transparent 0%, rgba(34, 2, 2, 0.5) 100%);
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 25%;
+    transition: width 0.3s ease-in-out;
+}
+
+/* barra lateral recolhida*/
+.collapsed {
+    width: 0;
+}
+
+/* botãõ para abrir/recolher barra lateral */
+.toggle-button {
+    position: absolute;
+    top: 1vh;
+    right: 5vw;
+    cursor: pointer;
+}
+
+
+.sidebar-content {
+    position: relative; /* Position content relative to the sidebar */
+    top: 120px; /* Adjust this value to match the button's height and any padding */
+}   
+
+
+/* Estilizando a barra de rolagem para navegadores Webkit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+   background: linear-gradient(to bottom, black, rgb(166, 84, 253)); /* Degradê neon */
+   animation: glow 1s ease infinite alternate;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff00ff, #00ffff); /* Degradê neon */
+    background-size: 300% 300%;
+    animation: glow 1s ease infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+.cursive{
+    font-family: 'Nova Mondo', monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('imgs/bg/vapor.png') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Título */
+h1 {
+    font-size: 3.5em;
+    background: linear-gradient(135deg, #ffcc00, #00d9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0px #ff006e, 4px 4px 0px #00d9ff, 6px 6px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+a {
+    
+    color:  blueviolet;
+    text-shadow: 0.5px 0.5px 0.1px #ff006e, 1px 1px 0px #00d9ff, 1.5px 1.5px 1.2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+
+a:hover {
+
+    color:aquamarine;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Caixa de entrada */
+input[type="text"] {
+    font-size: 1.5em;
+    padding: 15px;
+    border: 3px solid #ff006e;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00fffb;
+    text-shadow: 1px 1px 5px #000;
+    outline: none;
+    width: 300px;
+    box-shadow: 0 0 20px #ff00ab, 0 0 30px #240046;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffcc00;
+    border-color: #ffcc00;
+    box-shadow: 0 0 20px #ff006e, 0 0 30px #00d9ff, 0 0 40px #7209b7;
+}
+
+/* Botão */
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffcc00;
+    background: linear-gradient(145deg, #480ca8, #3a0ca3);
+    border: 3px solid #00d9ff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff006e, 0 0 25px #00d9ff, 0 0 35px #9d4edd;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #7209b7, #3a0ca3);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff006e, 0 0 30px #f72585, 0 0 40px #00d9ff;
+}
+
+button:active {
+    background: linear-gradient(145deg, #ff006e, #9d4edd);
+    transform: scale(0.95);
+    box-shadow: 0 0 20px #f72585, 0 0 30px #ff006e, 0 0 40px #480ca8;
+}
+
+/* Caixa de resultados */
+.resultado {
+    font-size: 1.5em;
+    margin-top: 40px;
+    padding: 20px;
+    background: linear-gradient(circle, transparent 25%, rgba(255, 255, 255, 0.2) 75%);
+    color: #ffcc00;
+    text-shadow: 2px 2px 0px #ff006e, 4px 4px 0px #00d9ff, 6px 6px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid #f72585;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ff006e, 0 0 30px #f72585, 0 0 40px #00d9ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efeito de grade ao fundo */
+body::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 25%, rgba(255, 255, 255, 0.2) 75%);
+    background-size: 10px 10px; /* Grade maior */
+    transform: translate(-50%, -50%) rotateX(45deg) rotateZ(45deg);
+    opacity: 0.2;
+    z-index: -2;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    input[type="text"], button {
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .resultado {
+        font-size: 1.2em;
+    }
+}
