@@ -1,7 +1,9 @@
 # imersao-gemini
 Repositório da imersão Alura Gemini
 
-Bem vindo à [Gemini-city](https://imersao-gemini-city-61on61lrr-jaspiors-projects.vercel.app/)!
+Bem vindo à [Gemini-city](https://imersao-gemini-city.vercel.app/)!
+
+Obs: Site não otimizado para celular!
 
 ![Gemini-city](https://github.com/jaspior/imersao-gemini/blob/main/imgs/city.png)
 
